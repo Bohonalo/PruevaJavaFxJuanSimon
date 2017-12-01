@@ -3,3 +3,7 @@
 .fondo{
 	-fx-background-color: #795548;
 }
+.fuente{
+    -fx-font-family: "Poiret One";
+    -fx-font-size: 39px;
+}
