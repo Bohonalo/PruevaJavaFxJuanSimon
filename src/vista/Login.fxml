@@ -4,8 +4,10 @@
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -15,8 +17,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <SplitPane dividerPositions="0.654308617234469" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -40,13 +41,17 @@
                   </Pane>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="579.0" prefWidth="555.0" style="-fx-background-color: #BDDBDBD;">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="579.0" prefWidth="555.0" style="-fx-background-color: #BDBDBD;">
                <children>
-                  <Text fill="#9140a8" layoutX="137.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="M" wrappingWidth="67.13671875">
-                     <font>
-                        <Font size="58.0" />
-                     </font>
-                  </Text>
+                  <AnchorPane layoutX="127.0" layoutY="54.0" prefHeight="92.0" prefWidth="87.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 50;">
+                     <children>
+                        <Text fill="#9140a8" layoutX="17.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="M" wrappingWidth="60.13671875">
+                           <font>
+                              <Font size="58.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
                   <VBox layoutX="46.0" layoutY="190.0" prefHeight="274.0" prefWidth="266.0" spacing="15.0">
                      <children>
                         <JFXTextField focusColor="#9140a8" labelFloat="true" maxWidth="259.0" minWidth="210.0" prefHeight="31.0" prefWidth="259.0" promptText="FIRST NAME" unFocusColor="#d7d7d7" />
@@ -63,7 +68,14 @@
                               <Font size="13.0" />
                            </font>
                         </JFXToggleButton>
-                        <JFXButton buttonType="RAISED" prefHeight="41.0" prefWidth="140.0" ripplerFill="#bf78c2" style="-fx-border-color: #8000a4; -fx-border-radius: 10px; -fx-border-width: 0.5;" text="GET STARTED" textFill="#8000a4" />
+                        <JFXButton buttonType="RAISED" prefHeight="41.0" prefWidth="140.0" ripplerFill="#bf78c2" style="-fx-border-color: #8000a4; -fx-border-radius: 10px; -fx-border-width: 0.5;" text="GET STARTED" textFill="#8000a4">
+                           <tooltip>
+                              <Tooltip text="OpenFreeSolo" />
+                           </tooltip>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
                      </children>
                   </HBox>
                </children>
