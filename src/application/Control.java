@@ -11,23 +11,44 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+/**
+ * The Class Control.
+ */
 public class Control {
 	
+	/** The o. */
 	OpcionesVentana o = new OpcionesVentana();
 	
+    /** The Anchor. */
     @FXML
     private AnchorPane Anchor;
 
+    /**
+     * Salir.
+     *
+     * @param event the event
+     */
     @FXML
     void Salir(MouseEvent event) {
     	System.exit(0);
     }
+    
+    /**
+     * Moverse.
+     *
+     * @param event the event
+     */
     @FXML
     void Moverse(MouseEvent event) {
     	o.moverVentanaAnchor(Anchor);
     }
 	
-	 @FXML
+	 /**
+ 	 * Abrir.
+ 	 *
+ 	 * @param event the event
+ 	 */
+ 	@FXML
 	    void Abrir(MouseEvent event) {
 		 try {
 	           FXMLLoader loader = new FXMLLoader(Main.class.getResource("../vista/FreeSolo.fxml"));
